@@ -30,7 +30,7 @@ static void main_window_load(Window *window) {
   text_layer_set_font(s_text_layer, s_text_font);
   
   // Apply custom text config and refresh the text layer
-  apply_config_text(true);
+  apply_config_text(false);
   
   // TIME
   // Create the TextLayer with specific bounds
@@ -108,7 +108,7 @@ static void init() {
   // Register with TickTimerService
   tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);
   // Make sure the time is displayed from the start
-  update_time();
+  //update_time();
   
   // Register for battery level updates
   battery_state_service_subscribe(battery_handler);
