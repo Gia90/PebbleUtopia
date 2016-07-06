@@ -19,19 +19,6 @@ static void main_window_load(Window *window) {
   s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_UNIVERSALIS_ADF_REGULAR_18));
   s_text_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_UNIVERSALIS_ADF_BOLD_18));
   
-  // TEXT
-  // Where is Jessica Hyde?
-  // Don't put the gas away yet
-  s_text_layer = text_layer_create(GRect(0, 130, bounds.size.w, 100));
-  text_layer_set_background_color(s_text_layer, GColorClear);
-  text_layer_set_text_color(s_text_layer, s_text_color);
-  text_layer_set_text(s_text_layer, config_custom_text);
-  text_layer_set_text_alignment(s_text_layer, GTextAlignmentCenter);
-  text_layer_set_font(s_text_layer, s_text_font);
-  
-  // Apply custom text config and refresh the text layer
-  apply_config_text(false);
-  
   // TIME
   // Create the TextLayer with specific bounds
   s_time_layer = text_layer_create(GRect(0, 0, bounds.size.w, 100));
@@ -66,6 +53,21 @@ static void main_window_load(Window *window) {
   
   bitmap_layer_set_bitmap(s_battery_layer, s_battery_bitmap);
   bitmap_layer_set_compositing_mode(s_battery_layer, GCompOpSet);
+  
+  // TEXT
+  // Where is Jessica Hyde?
+  // Don't put the gas away yet
+  s_text_layer = text_layer_create(GRect(0, 130, bounds.size.w, 100));
+  text_layer_set_background_color(s_text_layer, GColorClear);
+  text_layer_set_text_color(s_text_layer, s_text_color);
+  APP_LOG(APP_LOG_LEVEL_INFO, "MAIN WIN LOAD config_custom_text: %s", config_custom_text);
+  text_layer_set_text(s_text_layer, config_custom_text);
+  text_layer_set_text_alignment(s_text_layer, GTextAlignmentCenter);
+  text_layer_set_font(s_text_layer, s_text_font);
+  
+  // Apply custom text config and refresh the text layer
+  apply_config_text(true);
+  
   // Add to Window
   layer_add_child(window_layer, bitmap_layer_get_layer(s_battery_layer));
 }
@@ -108,7 +110,7 @@ static void init() {
   // Register with TickTimerService
   tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);
   // Make sure the time is displayed from the start
-  //update_time();
+  update_time();
   
   // Register for battery level updates
   battery_state_service_subscribe(battery_handler);

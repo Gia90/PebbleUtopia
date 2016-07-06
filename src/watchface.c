@@ -199,7 +199,7 @@ void apply_config_colors(bool update_ui) {
   {
     case UT1:
               s_background_color = GColorYellow;
-              s_text_color = GColorBrass;
+              s_text_color = GColorArmyGreen;
               break;
     case UT2:
               s_background_color = GColorBrightGreen;
