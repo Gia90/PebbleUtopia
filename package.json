@@ -1,0 +1,91 @@
+{
+    "author": "Gia90",
+    "dependencies": {
+        "pebble-clay": "^1.0.1"
+    },
+    "keywords": [],
+    "name": "utopia",
+    "pebble": {
+        "capabilities": [
+            "configurable"
+        ],
+        "displayName": "UTOPIA",
+        "enableMultiJS": true,
+        "messageKeys": [
+            "COLOR_PRESET",
+            "BG_CUSTOM_COLOR",
+            "TEXT_CUSTOM_COLOR",
+            "SHOW_TEXT",
+            "CUSTOM_TEXT"
+        ],
+        "projectType": "native",
+        "resources": {
+            "media": [
+                {
+                    "file": "images/chilly.png",
+                    "name": "IMAGE_BATTERY_HIGHEST",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/eye.png",
+                    "name": "IMAGE_BATTERY_LOWEST",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/spoon.png",
+                    "menuIcon": true,
+                    "name": "IMAGE_BATTERY_LOW",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/bleach.png",
+                    "name": "IMAGE_BATTERY_MEDIUM",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "images/sand.png",
+                    "name": "IMAGE_BATTERY_HIGH",
+                    "targetPlatforms": null,
+                    "type": "bitmap"
+                },
+                {
+                    "file": "fonts/UniversalisADFStd-Bold.ttf",
+                    "name": "UNIVERSALIS_ADF_BOLD_18",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "fonts/UniversalisADFStd-Bold.ttf",
+                    "name": "UNIVERSALIS_ADF_BOLD_52",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "fonts/UniversalisADFStd-Regular.ttf",
+                    "name": "UNIVERSALIS_ADF_REGULAR_11",
+                    "targetPlatforms": null,
+                    "type": "font"
+                },
+                {
+                    "file": "fonts/UniversalisADFStd-Regular.ttf",
+                    "name": "UNIVERSALIS_ADF_REGULAR_18",
+                    "targetPlatforms": null,
+                    "type": "font"
+                }
+            ]
+        },
+        "sdkVersion": "3",
+        "targetPlatforms": [
+            "basalt"
+        ],
+        "uuid": "41d5e1f2-37f1-4eea-88ad-a0641594ae3b",
+        "watchapp": {
+            "watchface": true
+        }
+    },
+    "version": "1.0.0"
+}
