@@ -1,6 +1,6 @@
 # Pebble Utopia Watchface
 Pebble Utopia Watchface with time, date and battery, inspired by UTOPIA TV Show.
-[Pebble Store Link](https://apps.getpebble.com/en_US/application/577d109366202abaab0001eb)
+> Pebble Store: https://apps.getpebble.com/en_US/application/577d109366202abaab0001eb
 
 ![alt tag](https://raw.githubusercontent.com/Gia90/PebbleUtopia/master/previews/chilly.png)
 ![alt tag](https://raw.githubusercontent.com/Gia90/PebbleUtopia/master/previews/sand.png)
